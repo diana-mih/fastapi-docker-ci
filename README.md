@@ -26,10 +26,14 @@ This project demonstrates a simple Python API built with FastAPI, containerized 
 ## Running the App Locally
 
 ### 1. Install dependencies
+```sh
 pip install -r requirements.txt
+```
 
 ### 2. Run locally
+```sh
 uvicorn app.main:app --reload
+```
 
 ### 3. Access endpoints
 - http://localhost:8000/
@@ -41,10 +45,14 @@ uvicorn app.main:app --reload
 ## Running with Docker
 
 ### Build image
+```sh
 docker build -t fastapi-app .
+```
 
 ### Run container
+```sh
 docker run -p 8000:8000 fastapi-app
+```
 
 ---
 
@@ -61,12 +69,14 @@ It automatically runs on every push to `main` branch and performs:
 
 ## Project Structure
 
+```
 .
 ├── app/
 │   └── main.py
 ├── Dockerfile
 ├── requirements.txt
 └── .github/workflows/ci.yml
+```
 
 ---
 
