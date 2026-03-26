@@ -1,7 +1,7 @@
-# FastAPI + Docker + CI/CD Project
+# FastAPI + Docker + CI/CD + AWS Project
 
 ## Overview
-This project demonstrates a simple Python API built with FastAPI, containerized using Docker, and integrated with a CI pipeline using GitHub Actions.
+This project demonstrates a simple Python API built with FastAPI, containerized using Docker, integrated with a CI pipeline using GitHub Actions and deployed on AWS ECS Fargate.
 
 ---
 
@@ -10,6 +10,8 @@ This project demonstrates a simple Python API built with FastAPI, containerized 
 - FastAPI
 - Docker
 - GitHub Actions (CI/CD)
+- AWS ECS Fargate
+- AWS ECR
 
 ---
 
@@ -19,7 +21,11 @@ This project demonstrates a simple Python API built with FastAPI, containerized 
 - Version endpoint (`/version`)
 - Logging support
 - Dockerized application
-- Automated CI pipeline on push
+- Automated CI/CD pipeline:
+  - Build Python code & Docker image
+  - Push Docker image to AWS ECR
+- Deployable to AWS ECS Fargate
+- Publicly accessible API via Security Group configuration
 
 ---
 
@@ -64,7 +70,9 @@ It automatically runs on every push to `main` branch and performs:
 - Dependency installation
 - Basic checks
 - Docker image build
-
+- Login to AWS ECR
+- Tag Docker image for ECR
+- Push Docker image to ECR
 ---
 
 ## Project Structure

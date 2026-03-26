@@ -1,0 +1,29 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Python virtual environments
+venv/
+.env
+.env.*
+
+# Logs
+*.log
+
+# Docker
+*.tar
+docker-compose.override.yml
+
+# IDEs / Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# AWS / Secrets
+*.pem
+*.key
